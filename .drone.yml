@@ -23,7 +23,7 @@ steps:
   - pwd
   - apt-get -qq update -y && apt-get -qq update
   - apt-get -qq install -y cmake libgtest-dev > /dev/null
-  - export PROJ_PATH=/build/src
+  - export PROJ_PATH=/drone/src
   - cd /usr/src/gtest && cmake CMakeLists.txt && make && cd lib && cp *.a /usr/lib && cd -
   - cd $PROJ_PATH
   - mkdir build
