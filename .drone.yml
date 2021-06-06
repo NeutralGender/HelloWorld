@@ -20,6 +20,7 @@ steps:
 - name: test
   image: gcc
   commands:
+  - pwd
   - apt-get -qq update -y && apt-get -qq update
   - apt-get -qq install -y cmake libgtest-dev > /dev/null
   - export PROJ_PATH=/build/src
