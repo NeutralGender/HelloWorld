@@ -11,7 +11,9 @@ steps:
 
 - name: cmake
   image: nextcloudci/client-5.12:client-5.12-12
-  commands:
+  commands
+  - pwd
+  - ls -la
   - mkdir build
   - cd build
   - cmake ..
