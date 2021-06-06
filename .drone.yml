@@ -12,7 +12,5 @@ steps:
 - name: greeting
   image: gcc
   commands:
-  - mkdir build
-  - cd build
-  - cmake ..
+  - cmake .
   - make
