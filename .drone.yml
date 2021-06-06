@@ -9,6 +9,11 @@ steps:
   - echo hello
   - echo world
 
+- name: Start build
+  image: alpine
+  commands:
+  - echo start build
+
 - name: cmake
   image: nextcloudci/client-5.12:client-5.12-12
   commands:
@@ -17,7 +22,12 @@ steps:
   - cmake ..
   - make
 
-- name: test
+- name: Install dependencies
+  image: alpine
+  commands:
+  - echo Install dependencies
+
+- name: testDep
   image: gcc
   commands:
   - pwd
@@ -25,9 +35,3 @@ steps:
   - apt-get -qq install -y cmake libgtest-dev > /dev/null
   - export PROJ_PATH=/drone/src
   - cd /usr/src/gtest && cmake CMakeLists.txt && make && cd lib && cp *.a /usr/lib && cd -
-  - cd $PROJ_PATH
-  - mkdir test_build
-  - cd test_build
-  - cmake ../test/CMakeLists.txt
-  - cd /drone/src/test
-  - make
