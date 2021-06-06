@@ -26,7 +26,7 @@ steps:
   - export PROJ_PATH=/drone/src
   - cd /usr/src/gtest && cmake CMakeLists.txt && make && cd lib && cp *.a /usr/lib && cd -
   - cd $PROJ_PATH
-  - mkdir build
-  - cd build
+  - mkdir test_build
+  - cd test_build
   - cmake CMakeListsTest.txt
   - make
