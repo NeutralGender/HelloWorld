@@ -28,5 +28,5 @@ steps:
   - cd $PROJ_PATH
   - mkdir test_build
   - cd test_build
-  - cmake ../test/CMakeLists.txt -B build
+  - cmake ../test/CMakeLists.txt -B test_build
   - make
