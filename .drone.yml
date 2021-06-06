@@ -1,0 +1,34 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  -name: greeting
+  image: drone
+  commands:
+  - echo hello
+  - echo world
+
+  -name: second
+  image: drone
+  commands:
+  - echo hello
+  - echo world
+
+  -name: third
+  image: drone
+  commands:
+  - echo hello
+  - echo world
+
+  -name: mkbuild
+  image: drone
+  commands:
+  - mkdir build
+
+  -name: Build
+  image: drone
+  commands:
+  - mkdir build
+  - cmake ..
+  - make
