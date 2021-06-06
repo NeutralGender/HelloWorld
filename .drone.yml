@@ -11,3 +11,19 @@ steps:
 - name: greeting
   commands:
   - echo hello world
+
+- name: greeting1
+  commands:
+  - echo hello world
+
+- name: greeting2
+  commands:
+  - echo hello world
+
+- name: greeting3
+  commands:
+  - echo hello world
+
+- name: greeting4
+  commands:
+  - echo hello world
