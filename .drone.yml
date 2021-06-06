@@ -29,4 +29,5 @@ steps:
   - mkdir test_build
   - cd test_build
   - cmake ../test/CMakeLists.txt
+  - cd /drone/src/test
   - make
