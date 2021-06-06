@@ -1,29 +1,10 @@
----
 kind: pipeline
-type: exec
+type: docker
 name: default
-
-platform:
-  os: linux
-  arch: amd64
 
 steps:
 - name: greeting
+  image: alpine
   commands:
-  - echo hello world
-
-- name: greeting1
-  commands:
-  - echo hello world
-
-- name: greeting2
-  commands:
-  - echo hello world
-
-- name: greeting3
-  commands:
-  - echo hello world
-
-- name: greeting4
-  commands:
-  - echo hello world
+  - echo hello
+  - echo world
