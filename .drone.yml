@@ -8,17 +8,6 @@ platform:
   arch: amd64
 
 steps:
-  -name: greeting
+- name: greeting
   commands:
-  - echo hello
-  - echo world
-
-  -name: second
-  commands:
-  - echo hello
-  - echo world
-
-  -name: third
-  commands:
-  - echo hello
-  - echo world
+  - echo hello world
